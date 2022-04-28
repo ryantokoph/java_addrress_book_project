@@ -1,0 +1,41 @@
+package addressBook;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Main {
+	
+	static Scanner input = new Scanner(System.in);
+	static List<String> bookList = new ArrayList<>();
+	
+//	Choice 1 "add entry"
+	public static void addEntry() {
+		System.out.println("Enter first name: ");
+		String firstName = input.nextLine();
+		System.out.println("Enter last name: ");
+		String lastName = input.nextLine();
+		System.out.println("Enter phoneNumber: ");
+		String phoneNumber = input.nextLine();
+		System.out.println("Enter email address: ");
+		String email = input.nextLine();
+		bookList.add(firstName);
+		bookList.add(lastName);
+		bookList.add(phoneNumber);
+		bookList.add(email);
+		System.out.println("Added new entry!");
+//		System.out.println(bookList);
+	}
+
+	public static void main(String[] args) {
+		System.out.println("1) Add an entry\n2) Remove an entry\n3) Search for a specific entry\n"
+				+ "4) Print address book\n5) Delete Book\n6) Quit");
+		System.out.println("Please choose what you'd like to do with the database: ");
+		String choice = input.nextLine();
+		if (choice.equals("1")){
+			addEntry();
+		}
+
+	}
+
+}

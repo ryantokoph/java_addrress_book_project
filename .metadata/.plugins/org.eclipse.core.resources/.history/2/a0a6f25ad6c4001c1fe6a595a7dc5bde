@@ -1,0 +1,15 @@
+package addressBook;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class AddressBook {
+	List<AddressEntry> book = new ArrayList<>();
+	
+	public void addEntry(AddressEntry newEntry) {
+		book.add(newEntry);
+	}
+	
+}
+
+

@@ -1,0 +1,29 @@
+package addressBook;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class AddressBook {
+	List<AddressEntry> book = new ArrayList<>();
+	
+	
+//	Choice 1 "add entry"
+	public void addEntry(AddressEntry newEntry) {
+		book.add(newEntry);
+	}
+	
+	
+//	Choice 2 "remove entry"
+	public void removeEntry(AddressEntry newEntry) {
+		book.remove(newEntry);
+	}
+	
+	
+//	Choice 3 "search for entry"
+	public void searchForEntry(AddressEntry newEntry) {
+		
+	}
+	
+}
+
+

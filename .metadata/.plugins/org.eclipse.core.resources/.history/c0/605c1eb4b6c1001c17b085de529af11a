@@ -1,0 +1,8 @@
+package addressBook;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class AddressBook {
+	List<String> bookList = new ArrayList<>();
+}

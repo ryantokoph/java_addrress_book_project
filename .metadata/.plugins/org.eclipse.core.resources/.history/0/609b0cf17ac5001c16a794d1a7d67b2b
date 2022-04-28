@@ -1,0 +1,98 @@
+package addressBook;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Main {
+	
+	static Scanner input = new Scanner(System.in);
+	static List<String> bookList = new ArrayList<>();
+	
+//	Choice 1 "add entry"
+//	public static void addEntry() {
+//		System.out.println("Enter first name: ");
+//		String firstName = input.nextLine();
+//		System.out.println("Enter last name: ");
+//		String lastName = input.nextLine();
+//		System.out.println("Enter phoneNumber: ");
+//		String phoneNumber = input.nextLine();
+//		System.out.println("Enter email address: ");
+//		String email = input.nextLine();
+//		bookList.add(firstName);
+//		bookList.add(lastName);
+//		bookList.add(phoneNumber);
+//		bookList.add(email);
+//		System.out.println("Added new entry!");
+////		System.out.println(bookList);
+//	}
+	
+//	Choice 2 "remove entry"
+//	public static void removeEntry() {
+//		System.out.println("Enter an entry's email to remove: ");
+//		String removed = input.nextLine();
+//		if (bookList.contains(removed)) {
+//			bookList.remove(removed);         
+//		}
+//	}
+	
+//	Choice 3 "search for an entry"
+//	public static void searchForEntry() {
+//		System.out.println("Enter your search: ");
+//		String searchItem = input.nextLine();
+//		for (int i = 0; i<bookList.size(); i++) {
+//			bookList.get(i);
+//			if (searchItem.equals(bookList.get(i))) {
+//				System.out.println(searchItem);
+//			}
+//		}
+//	}
+	
+//	Choice 4 "print address book"
+	public static void printAddressBook() {
+		System.out.println(bookList);
+	}
+	
+//	Choice 5 "delete book"
+	public static void deleteBook() {
+		//not sure how to remove all items from list
+		System.out.println("Address book cleared!");
+	}
+	
+//	Choice 6 "exit program"
+	public static void exitApp() {
+		//add timer before exiting
+		System.exit(0);
+	}
+
+	public static void main(String[] args) {
+		System.out.println("1) Add an entry\n2) Remove an entry\n3) Search for a specific entry\n"
+				+ "4) Print address book\n5) Delete Book\n6) Quit");
+		System.out.println("Please choose what you'd like to do with the database: ");
+		String choice = input.nextLine();
+		if (choice.equals("1")){
+			AddressEntry entry = new AddressEntry.addressFromInput(input);
+			AddressBook.addEntry(entry);
+		}
+		else if (choice.equals("2")) {
+//			removeEntry();
+		}
+		else if (choice.equals("3")) {
+//			searchForEntry();
+		}
+		else if (choice.equals("4")) {
+			printAddressBook();
+		}
+		else if (choice.equals("5")) {
+			deleteBook();
+		}
+		else if (choice.equals("6")) {
+			exitApp();
+		}
+		else {
+			System.out.println("Please choose a number between 1 and 6");
+		}
+
+	}
+
+}

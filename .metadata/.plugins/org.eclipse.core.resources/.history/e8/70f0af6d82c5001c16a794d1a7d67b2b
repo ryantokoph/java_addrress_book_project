@@ -1,0 +1,55 @@
+package addressBook;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class AddressBook {
+	List<AddressEntry> book = new ArrayList<>();
+	
+	
+//	Choice 1 "add entry"
+	public void addEntry(AddressEntry newEntry) {
+		book.add(newEntry);
+	}
+	
+	
+//	Choice 2 "remove entry"
+	public void removeEntry(String email) {
+		for (int i = 0; i<book.size(); i++) {
+			AddressEntry lookUp = book.get(i);
+			if(lookUp.getEmail().equals(email)) {
+				book.remove(i);
+				return;
+			}
+		}
+	}
+	
+	
+//	Choice 3 "search for entry"					***make 4 separate searches for each criteria***
+	public AddressEntry searchForEntry(String firstName) {
+		for (int i = 0; i<book.size(); i++) {
+			AddressEntry search1stName = book.get(i);
+			if (search1stName.getFirstName().equals(firstName)) {
+				return search1stName;
+			}
+		}
+		return null;
+	}
+	
+	
+//	Choice 4 "print address book"
+	public void printBook() {
+		System.out.println();
+	}
+	
+	
+//	Choice 5 "delete book"
+	public void deleteBook() {
+		book.clear();
+		System.out.println("Address book cleared!");
+	}
+	
+	
+}
+
+
