@@ -16,7 +16,7 @@ public class Main {
 			
 			System.out.println("1) Add an entry\n2) Remove an entry\n3) Search for a specific entry\n"
 					+ "4) Print address book\n5) Delete Book\n6) Quit");
-			System.out.println("\nPlease choose what you'd like to do with the database (1-6): ");
+			System.out.println("Please choose what you'd like to do with the database (1-6): ");
 	
 			choice = input.nextLine();
 			if (choice.equals("1")){

@@ -40,7 +40,7 @@ public class AddressBook {
 	public AddressEntry searchByLastName(String lastName) {
 		for (int i = 0; i<book.size(); i++) {
 			AddressEntry searchLastName = book.get(i);
-			if (searchLastName.getLastName().equals(lastName)) {
+			if (searchLastName.getFirstName().equals(lastName)) {
 				System.out.println(searchLastName);
 			}
 		}
@@ -50,7 +50,7 @@ public class AddressBook {
 	public AddressEntry searchByPhoneNumber(String phoneNumber) {
 		for (int i = 0; i<book.size(); i++) {
 			AddressEntry searchPhoneNumber = book.get(i);
-			if (searchPhoneNumber.getPhoneNumber().equals(phoneNumber)) {
+			if (searchPhoneNumber.getFirstName().equals(phoneNumber)) {
 				System.out.println(searchPhoneNumber);
 			}
 		}
@@ -60,7 +60,7 @@ public class AddressBook {
 	public AddressEntry searchByEmail(String email) {
 		for (int i = 0; i<book.size(); i++) {
 			AddressEntry searchEmail = book.get(i);
-			if (searchEmail.getEmail().equals(email)) {
+			if (searchEmail.getFirstName().equals(email)) {
 				System.out.println(searchEmail);
 			}
 		}
